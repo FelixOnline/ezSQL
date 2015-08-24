@@ -193,7 +193,7 @@
 		{
 
 			// This keeps the connection alive for very long running scripts
-			if ( $this->num_queries >= 500 )
+			if ( $this->num_queries % 500 == 499 )
 			{
 				$this->num_queries = 0;
 				$this->disconnect();
